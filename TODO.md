@@ -23,6 +23,6 @@
   * Until:
 
 - [ ] paper flow 구체화하기
-  * Who:
+  * Who: 
   * Form of Results:
   * Until:
