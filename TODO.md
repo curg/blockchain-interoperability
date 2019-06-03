@@ -23,6 +23,6 @@
   * Until:
 
 - [ ] paper flow 구체화하기
-  * Who: 
+  * Who: 박지연
   * Form of Results:
   * Until:
