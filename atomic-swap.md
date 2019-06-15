@@ -48,20 +48,20 @@ Atomic Swap이란?
  For safety, both should complete the process with lots of time until the deadlines.
 ```
 ## 분류
-개요 
-### Script-to-Script
 
-### Script-to-Smart Contract(SC) / SC-to-Script
+### 1. Script-to-Script
 
-### SC-to-SC
+### 2. Script-to-Smart Contract(SC) / SC-to-Script
+
+### 3. SC-to-SC
 
 
 ## 주요 프로젝트
-### Script-to-Script
+### 1. Script-to-Script
 Bitcoin-Litecoin
-### Script-to-Smart Contract(SC)
+### 2. Script-to-Smart Contract(SC) / SC-to-Script
 
-### SC-to-SC
+### 3. SC-to-SC
 Ethereum-Stellar 
 
 ### 언제?
