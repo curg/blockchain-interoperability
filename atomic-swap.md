@@ -5,8 +5,8 @@ Atomic Swap이란?
 ## 왜?
 - 중앙화된 거래소의 높은 수수료
 - 중앙화된 거래소를 포함한 모든 형태의 중개자를 신뢰할 수 없음
-## 어떻게? (기술)
-핵심 기술 두 가지 
+## 어떻게?
+#### 핵심 기술
 1. Hash Time Lock Contract(HTLC) - Hashlock + Timelock
 - Hashlock - 두 거래 당사자는 H(x)를 만족하는 x로 상대방이 작성한 거래의 output을 소비할 수 있음
 ```
@@ -16,8 +16,8 @@ Ex. x OP_HASH160 H(x) OP_EQUAL
 ```
 Ex. sig pubKey t OP_CHECKLOCKTIMEVERIFY OP_DROP OP_DUP OP_HASH160 pubKeyHash OP_EQUALVERIFY OP_CHECKSIG
 ```
-2. multisig
-알고리즘 
+2. Multisignature
+#### 알고리즘 (by Tier Nolan)
 ``` A picks a random number x
  
  A creates TX1: "Pay w BTC to <B's public key> if (x for H(x) known and signed by B) or (signed by A & B)"
@@ -68,18 +68,13 @@ Ex. sig pubKey t OP_CHECKLOCKTIMEVERIFY OP_DROP OP_DUP OP_HASH160 pubKeyHash OP_
 ### 1. Script-to-Script
 Bitcoin-Litecoin
 ### 2. Script-to-Smart Contract(SC) / SC-to-Script
-
+Bitcoin-Ethereum
 ### 3. SC-to-SC
 Ethereum-Stellar 
 
-### 언제?
-TBA
-
-### 누가?
-TBA
-
 ## 문제점
-프로젝트별?
+- (Tier Nolan의 알고리즘에서) A가 Tx1과 Tx2를 작성하였으나 B가 Tx3과 Tx4를 작성하지 않을 경우 A의 자산만 묶이는 결과로 이어짐
+- 자산 간 교환 비율을 어떻게 결정하면 좋은가에 대한 과제가 남음
 
-### 문제점에 대한 개선
+### 문제점에 대한 개선 사항
 TBA
