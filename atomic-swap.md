@@ -10,7 +10,7 @@ Atomic Swap이란?
 1. Hash Time Lock Contract(HTLC) - Hashlock + Timelock
 - Hashlock - 두 거래 당사자는 H(x)를 만족하는 x로 상대방이 작성한 거래의 output을 소비할 수 있음
 ```
-Ex. x OP_HASH160 H(x) OP_EQUAL
+Ex. sig x OP_HASH160 H(x) OP_EQUAL pubKey OP_CHECKSIG
 ```
 - Timelock - 두 거래 당사자 중 x를 제시하는 쪽이 상대방이 작성한 거래의 output을 소비함과 동시에 자신이 작성한 거래를 refund하는 것을 방지
 ```
