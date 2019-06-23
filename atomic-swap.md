@@ -12,7 +12,7 @@ Atomic Swap이란?
 ```
 Ex. x OP_HASH160 H(x) OP_EQUAL
 ```
-- Timelock - 두 거래 당사자 중 x를 제시하는 쪽이 상대방의 output을 소비함과 동시에 자신이 작성한 거래를 refund하는 것을 방지
+- Timelock - 두 거래 당사자 중 x를 제시하는 쪽이 상대방이 작성한 거래의 output을 소비함과 동시에 자신이 작성한 거래를 refund하는 것을 방지
 ```
 Ex. sig pubKey t OP_CHECKLOCKTIMEVERIFY OP_DROP OP_DUP OP_HASH160 pubKeyHash OP_EQUALVERIFY OP_CHECKSIG
 ```
