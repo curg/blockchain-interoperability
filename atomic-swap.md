@@ -17,6 +17,9 @@ Ex. sig x OP_HASH160 H(x) OP_EQUAL pubKey OP_CHECKSIG
 Ex. sig pubKey t OP_CHECKLOCKTIMEVERIFY OP_DROP OP_DUP OP_HASH160 pubKeyHash OP_EQUALVERIFY OP_CHECKSIG
 ```
 2. Multisignature
+```
+Ex. sigA sigB 2 pubKeyA pubKeyB 2 OP_CHECKMULTISIG
+```
 #### 알고리즘 (by Tier Nolan)
 ``` A picks a random number x
  
