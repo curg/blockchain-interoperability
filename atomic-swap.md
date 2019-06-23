@@ -1,18 +1,21 @@
 # Atomic Swap
 Atomic Swap이란? 
-- 서로 다른 블록체인 기반 암호화폐의 투명하고 신뢰할 수 있는 교환 방식 
-
-- (+) 서로 다른 블록체인 기반의 암호화폐를 소유한 사람이 서로 신뢰를 확보할 필요 없이 안전하게 자산을 교환할 수 있도록 하는 기술
+- 서로 다른 블록체인 기반의 암호화폐를 소유한 사람이 서로 신뢰를 확보할 필요 없이 안전하게 자산을 교환할 수 있도록 하는 기술
+- 2013년 비트코인 포럼에서 아이디어 제안됨 (Tier Nolan)
 ## 왜?
-- 서로 다른 블록체인 간의 신뢰할 수 있는 통신 방법이 필요. 
-- 등장배경 : 2013년 비트코인 포럼에서 Tier Nolan에 의해 처음으로 제안됨. 
-- (+) 중앙화된 거래소의 높은 수수료.
-- (+) 중앙화된 거래소를 포함한 모든 형태의 중개자를 신뢰할 수 없음.
-- (+) 2013년 비트코인 포럼에서 Tier Nolan이 아이디어를 제안.
+- 중앙화된 거래소의 높은 수수료
+- 중앙화된 거래소를 포함한 모든 형태의 중개자를 신뢰할 수 없음
 ## 어떻게? (기술)
 핵심 기술 두 가지 
-1. Hash Time Lock Contract(HTLC)
-- (+)
+1. Hash Time Lock Contract(HTLC) - Hashlock + Timelock
+- Hashlock - 두 거래 당사자는 H(x)를 만족하는 x로 상대방이 작성한 거래의 output을 소비할 수 있음
+```
+Ex. x OP_HASH160 H(x) OP_EQUAL
+```
+- Timelock - 두 거래 당사자 중 x를 제시하는 쪽이 상대방의 output을 소비함과 동시에 자신이 작성한 거래를 refund하는 것을 방지
+```
+Ex. sig pubKey t OP_CHECKLOCKTIMEVERIFY OP_DROP OP_DUP OP_HASH160 pubKeyHash OP_EQUALVERIFY OP_CHECKSIG
+```
 2. multisig
 알고리즘 
 ``` A picks a random number x
