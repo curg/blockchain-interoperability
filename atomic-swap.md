@@ -1,15 +1,26 @@
 # Atomic Swap
-Atomic Swap이란? 
-- 서로 다른 블록체인 기반 암호화폐의 투명하고 신뢰할 수 있는 교환 방식 
+Atomic Swap이란?
+- 서로 다른 블록체인 간 안전한 무신뢰(trustless) 자산 교환 방법
+- 2013년 비트코인 포럼에서 아이디어 제안됨 (Tier Nolan)
 ## 왜?
-- 서로 다른 블록체인 간의 신뢰할 수 있는 통신 방법이 필요. 
-- 등장배경 : 2013년 비트코인 포럼에서 Tier Nolan에 의해 처음으로 제안됨. 
-## 어떻게? (기술)
-핵심 기술 두 가지 
-1. Hash Time Lock Contract(HTLC)
-
-2. multisig
-알고리즘 
+- 중앙화된 거래소의 높은 수수료
+- 중앙화된 거래소를 포함한 모든 형태의 중개자를 신뢰할 수 없음
+## 어떻게?
+#### 핵심 기술
+1. Hash Time Lock Contract(HTLC) - Hashlock + Timelock
+- Hashlock - 두 거래 당사자는 H(x)를 만족하는 x로 상대방이 작성한 거래의 output을 소비할 수 있음
+```
+Ex. sig x OP_HASH160 H(x) OP_EQUAL pubKey OP_CHECKSIG
+```
+- Timelock - 두 거래 당사자 중 x를 제시하는 쪽이 상대방이 작성한 거래의 output을 소비함과 동시에 자신이 작성한 거래를 refund하는 것을 방지
+```
+Ex. sig pubKey t OP_CHECKLOCKTIMEVERIFY OP_DROP OP_DUP OP_HASH160 pubKeyHash OP_EQUALVERIFY OP_CHECKSIG
+```
+2. Multisignature
+```
+Ex. sigA sigB 2 pubKeyA pubKeyB 2 OP_CHECKMULTISIG
+```
+#### 알고리즘 (by Tier Nolan)
 ``` A picks a random number x
  
  A creates TX1: "Pay w BTC to <B's public key> if (x for H(x) known and signed by B) or (signed by A & B)"
@@ -60,18 +71,13 @@ Atomic Swap이란?
 ### 1. Script-to-Script
 Bitcoin-Litecoin
 ### 2. Script-to-Smart Contract(SC) / SC-to-Script
-
+Bitcoin-Ethereum
 ### 3. SC-to-SC
 Ethereum-Stellar 
 
-### 언제?
-TBA
-
-### 누가?
-TBA
-
 ## 문제점
-프로젝트별?
+- (Tier Nolan의 알고리즘에서) A가 Tx1과 Tx2를 작성하였으나 B가 Tx3과 Tx4를 작성하지 않을 경우 A의 자산만 묶이는 결과로 이어짐
+- 자산 간 교환 비율을 어떻게 결정하면 좋은가에 대한 과제가 남음
 
-### 문제점에 대한 개선
+### 문제점에 대한 개선 사항
 TBA
