@@ -1,6 +1,24 @@
 # Peg
 
-Peg, Bridge, Relay 등 자주 등장하고 혼용되는 용어 정리
+## Backgrounds
+
+### Peg
+
+### One-way peg
+
+### Two-way peg
+
+### Relay
+
+
+
+### Bridge
+
+
+
+### Sidechain
+사이드체인이란 부모 체인(parent chain)과 대비해 사용하는 용어다. 관심을 가지고 지켜보는 체인을 부모 체인 또는 그냥
+
 
 ## 왜?
 TBA
