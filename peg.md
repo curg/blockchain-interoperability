@@ -55,22 +55,40 @@ TBA
 * (가제) centralized-peg
 * federate-peg (federated?)
 
-Federate peg is more de-centralized than centralized-peg. Its process is mostly similar with those of multi-signature transaction. As you can see in the term itself, the federation exists in federate-peg. Federation is composed of several different entities and each of them has sort of private keys. They all together mutli-signatuer wallet , which deposit exists. 
+Federate peg is more de-centralized than centralized-peg. Its process is mostly similar with those of multi-signature transaction. As you can see in the term itself, the federation exists in federate-peg. Federation is composed of several different entities and each of them has sort of private keys. They all together mutli-signatuer wallet , which deposit exists.
 
-  * Hub
+Federated Peg is a mechanism that uses functionaries to move assets between two chains.[4] 
+
+* Hub
+
+For COSMOS Hub is the genesis Zone of its ecosystem. Basically, Hub is connected with all the other zones. Imagine that zone A and B is trying to exchange sort of coins or information. The coin comes out from zone A and go to Hub. Then it goes to zone B. So everytime when two or more than two different zones are trying to interact they have to pass through the Hub. 
   
-  For COSMOS Hub is the genesis Zone of its ecosystem. Basically, Hub is connected with all the other zones. So if, the zone A  
-  and B is trying to exchange they have
-  
-  * multi-sig
-  
-  Same as the muli-sig wallet federated peg also work in the same way. 
+* multi-sig
+
+For making a transaction, the sender and owner have to use their own keys. Sender has to use their private key to proof the ownership of coins that will be sent and Reciever has to use its public key that will be used as a address. Only the keys of sender and receiver will be used in the transaction. But when it comes Multi-signature transaction some sort of parts will be changed. Most of part is still same, but the signature and ownership part. Ownership of coin or wallet is not belongs to single entity but more than one. And more than certain number of entities who have the ownership must sign to make transaction. M of N multisignature must be signed by at least M entities and the number of entities who have ownership is N. 
+
+For example, 3 of 5 multisignature wallet needs at least 3 signs to finish the transaction. And the ownership of wallet belongs to 5 entities. At least 3 signatures are need every single time when transaction occurs. 
   
 ### 방법에 대한 분류
 * add new opcode
+
 * SPV proof
-  * 모든 blocks
-  * superblock
+
+* 모든 blocks
+
+* superblock
+
+Superblock first and mostly mentioned at the paper named 'Using Superblocks to Bridge Dogecoin to Ethereum'. The basic concept of Superblock is almost same as that of Merkle hash from Merkle Tree and structure is also almost same with regular block. Superblock act its as the Root hash of several other blocks. 
+
+Structure of Superblock that it is proposed will contain : 
+
+- The root hash of a Merkle tree built from the block hashes.
+- The blocks’ accumulated difficulty.
+- The hash of the last block of the superblock.
+- The timestamp of the last block of the superblock.
+- The hash of the parent superblock data.
+
+Superblock was proposed for being used as a Bridge that connects Dogecoin and Ethereum. 
   
 ## 주요 프로젝트
 TBA
@@ -91,7 +109,7 @@ TBA
 [1] : https://www.lexico.com/en/definition/peg
 [2] : 
 [3] : Enabling Blockchain Innovations with Pegged Sidechains
-
+[4] : Strong Federations: An Interoperable Blockchain Solution to Centralized Third-Party Risks
 
 
 
