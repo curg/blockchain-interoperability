@@ -106,10 +106,10 @@ TBA
 TBA
 
 
-[1] : https://www.lexico.com/en/definition/peg
-[2] : 
-[3] : Enabling Blockchain Innovations with Pegged Sidechains
-[4] : Strong Federations: An Interoperable Blockchain Solution to Centralized Third-Party Risks
+[1] : https://www.lexico.com/en/definition/peg </br>
+[2] : </br>
+[3] : Enabling Blockchain Innovations with Pegged Sidechains </br>
+[4] : Strong Federations: An Interoperable Blockchain Solution to Centralized Third-Party Risks </br>
 
 
 
