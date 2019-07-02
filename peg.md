@@ -5,6 +5,7 @@
 Blockchain interoperability actually comes from connecting two or more different chains and validating each other's information. There are various ways to prove it, but among that pegging is one of the most basic and widely used methodology for implementing blockchain-interoperabiltiy. 
 
 ### Peg
+본래 페그(peg) 또는 페그제(peg system)는 어느 나라의 통화 가치를 특정 국가의 통화에 고정시켜 정해진 환율로 교환하는 것 또는 그러한 고정환율제를 의미한다. 마찬가지로 어느 블록체인의 가치를 다른 블록체인으로 전달하는 것을 페그라 한다.
 
 The definition of Peg, the word itself has been used even before blockchain, is 'A short pin or bolt, typically tapered at one end, that is used for securing something in place, hanging things on, or marking a position.'[1] Following after, the word 'pegged' is used as stable and mostly used in currencies. 
 
@@ -12,21 +13,16 @@ But in the blockchain, peg is used among the two or more different blockchains.
 
 There are several ways of pegging way but typically it can be differentiated by 2 ways : One-way peg, Two-way peg. And it's differentiated by the way chains got pegged. 
 
-### One-way peg
-
-### Two-way peg
-
 ### Relay
-
-
+릴레이는 타 블록체인의 **읽기(read)**와 **검증**을 수행하는 블록체인상에 구현된 시스템이다.[2]
 
 ### Bridge
-
-
+브릿지는 서로 다른 두 블록체인간 상호작용을 수행한다. *브릿지가 릴레이를 포괄하는 개념.* paritytech에서는 이더리움 메인넷(mainnet) PoA 사이드체인을 연결하는 Parity Bridge를 개발했다. Parity Bridge는 두 이더리움 기반 블록체인간에 임의의 메시지를 전송할 수 있도록 한다.[4]
 
 ### Sidechain
-사이드체인이란 부모 체인(parent chain)과 대비해 사용하는 용어다. 관심을 가지고 지켜보는 체인을 부모 체인 또는 그냥
+Blockstream이 정의한 사이드체인은 "다른 블록체인의 데이터를 검증하는 블록체인"이다. 그러나 일반적으로 사이드체인은 pegged sidechain의 의미로 혼용된다. pegged sidechain은 다른 블록체인의 데이터를 읽어 체인간 교차(cross-chain) 자산 이식성을 용이하게 한다.[5]
 
+위 용어들은 자주 혼용되지만, 본 글에서는 위와같이 정의해 엄밀히 구분한다.
 
 ## 왜?
 TBA
@@ -48,8 +44,10 @@ TBA
 ### 방향성으로 분류
 * one-way-peg
 * two-way-peg
-  * smart contract를 이용
-  * collateralized peg
+  * Symmetric two-way peg
+
+* smart contract를 이용
+* collateralized peg
 
 ### Relay를 기준으로 분류
 * (가제) centralized-peg
@@ -105,12 +103,16 @@ TBA
 ### 문제점에 대한 개선
 TBA
 
+# References
+[1] https://medium.com/blockchain-musings/pegged-sidechains-cafe1d8c7023   
+[2] https://medium.com/cryptronics/blockchain-interoperability-moving-assets-across-chains-e5203357d949   
+[3] https://wiki.polkadot.network/en/latest/polkadot/learn/bridges/   
+[4] https://github.com/paritytech/parity-bridge   
+[5] http://blockstream.com/sidechains.pdf   
 
+<!--
 [1] : https://www.lexico.com/en/definition/peg </br>
 [2] : </br>
 [3] : Enabling Blockchain Innovations with Pegged Sidechains </br>
 [4] : Strong Federations: An Interoperable Blockchain Solution to Centralized Third-Party Risks </br>
-
-
-
-
+-->
